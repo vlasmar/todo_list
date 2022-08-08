@@ -1,0 +1,85 @@
+body{
+    background-color: rgb(11, 173, 173);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(11, 173, 173);
+}
+
+.container{
+    background-color: white;
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2%;
+}
+
+#input-field {
+    width: 30rem;
+    padding: 1%;
+}
+
+#input-field:hover{
+    border: 1px solid orange;
+}
+
+#input-field:focus{
+    border: 2px solid orange !important;
+    outline: none;
+}
+
+#add{
+    width: 3rem;
+    padding: 1%;
+    background-color: rgb(11, 173, 173);
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.example{
+    padding-top: 2%;
+}
+
+.task{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.todo-tasks{
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-tasks:hover{
+    background-color: rgb(229, 240, 244);
+}
+
+.checkbox{
+    margin-right: 0.5rem;
+}
+
+.features{
+   display: flex;
+   align-items: center;
+}
+
+img{
+    padding: 0.5rem;
+}
+
+
+#remove-button{
+    background-color: rgb(11, 173, 173);
+    color: white;
+    border: none;
+    padding: 1rem;  
+    border-radius: 4%;  
+    font-size: 1rem;
+    cursor: pointer;
+}
