@@ -9,10 +9,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>TODO LIST</h1>
-        <div id="input">
-            <input type="text" id="input-field">
-            <button id="add">+</button>
+        <div class="box">
+            <h1>To-Do List</h1>
+            <div id="input">
+                <input type="text" id="input-field">
+                <button id="add">+</button>
+            </div>
         </div>
         <ul class="example" id="list">
             <div class="todo-tasks">
@@ -25,28 +27,30 @@
                     <img class="delete" src="images/delete-icon.png" width="14px">
                 </div>
             </div>
-            <div class="todo-tasks">
-                <div class="task">
-                    <input type="checkbox" class="checkbox">
-                    <p>Task 2</p>
+                <div class="todo-tasks">
+                    <div class="task">
+                        <input type="checkbox" class="checkbox">
+                        <p>Task 2</p>
+                    </div>
+                    <div class="features">
+                        <img class="pencil" src="">
+                        <img class="delete" src="">
+                    </div>
                 </div>
-                <div class="features">
-                    <img class="pencil" src="">
-                    <img class="delete" src="">
+                <div class="todo-tasks">
+                    <div class="task">
+                        <input type="checkbox" class="checkbox">
+                        <p>Task 3</p>
+                    </div>
+                    <div class="features">
+                        <img class="pencil" src="">
+                        <img class="delete" src="">
+                    </div>
                 </div>
             </div>
-            <div class="todo-tasks">
-                <div class="task">
-                    <input type="checkbox" class="checkbox">
-                    <p>Task 3</p>
-                </div>
-                <div class="features">
-                    <img class="pencil" src="">
-                    <img class="delete" src="">
-                </div>
-            </div>
-        </ul>
-        <button id="remove-button">Remove checked</button>
+           <ul>
+            <button id="remove-button">Remove checked</button>
+        </div>
         <script src="main.js"></script>
     </div>
 </body>
