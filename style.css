@@ -106,3 +106,7 @@ img{
     cursor: pointer;
     margin-bottom: 2rem;
 }
+li{
+    list-style-type: none;
+    display: flexbox;
+}
