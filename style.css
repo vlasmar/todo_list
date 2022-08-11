@@ -17,6 +17,7 @@ body{
 p{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: #b9b9ba;
+    
 }
 
 .box{
@@ -77,6 +78,7 @@ h1{
 .task{
     display: flex;
     justify-content: flex-start;
+    flex-wrap: nowrap;
 }
 
 .todo-tasks{
@@ -110,4 +112,12 @@ img{
 li{
     list-style-type: none;
     display: flexbox;
+}
+
+.paragraph{
+    padding: 1%;
+    margin: 0 2%;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
 }
