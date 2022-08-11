@@ -121,3 +121,7 @@ li{
     background-color: white;
     color: black;
 }
+.save{
+    padding: 0.5rem;
+    width: 18px;
+}
