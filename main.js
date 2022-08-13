@@ -17,6 +17,7 @@ function createTask(){
     edit.className = 'pencil';
     deleteTask.className = 'delete';
     saveBtn.className='save';
+    info.className='discription';
 
     list.appendChild(listItem);
     listItem.appendChild(divTask);    
@@ -34,6 +35,8 @@ function createTask(){
     deleteTask.src = 'images/delete-icon.png';
     saveBtn.src='images/save.jpg';
     saveBtn.style.display='none';
+
+   
     
     //document.querySelector('.pencil').onclick = function() {myFunction()};
     edit.addEventListener('click', function() {
@@ -45,7 +48,6 @@ function createTask(){
       } );
       saveBtn.addEventListener('click',(e) =>  {
         info.contentEditable=false;
-        //info.innerText=paragraph.value;
         info.classList.toggle('paragraph');
         edit.style.display='inline';
         saveBtn.style.display='none';
