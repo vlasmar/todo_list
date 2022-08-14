@@ -80,8 +80,6 @@ h1{
     border-radius:4em;
     margin-top: 1.4rem;
     accent-color: green;
-    
-    
 }
 .checkbox:checked +.discription{
     text-decoration:line-through white;
@@ -141,6 +139,12 @@ li{
     padding: 0.5rem;
     width: 18px;
 }
+
+.completed {
+    color: rgba(192, 192, 192, 0.8);
+    text-decoration: line-through;
+  }
+  
 .todo-task:has(input:checked){
     display: none;
     background-color:black;

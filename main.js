@@ -33,12 +33,11 @@ function createTask(){
     info.innerHTML=input.value;
     edit.src = 'images/pencil.png';
     deleteTask.src = 'images/delete-icon.png';
-    saveBtn.src='images/save.jpg';
+    saveBtn.src='images/save.png';
     saveBtn.style.display='none';
 
    
     
-    //document.querySelector('.pencil').onclick = function() {myFunction()};
     edit.addEventListener('click', function() {
         info.contentEditable = true;
         info.classList.toggle('paragraph');
@@ -56,17 +55,27 @@ function createTask(){
     deleteTask.addEventListener('click', (e) => {
         listItem.remove();
     });
+
 }
 
 let addButton = document.querySelector('#add');
 addButton.addEventListener('click',(e)=>{
     e.preventDefault();
     if(input.value===""){
-        alert("Input schuld not be empty");
+        alert("Input should not be empty");
         return;
     }
     createTask();
     input.value="";
-})
+});
 
-
+let removeButton = document.querySelector('#remove-button');
+removeButton.addEventListener('click', (e) => {
+    const checkboxesList = document.getElementsByClassName('checkbox');
+    for (var i=0; i<checkboxesList.length; i++){
+        if (checkboxesList[i].checked){
+            const checkBox = document.querySelector('li'); 
+            checkBox.remove();
+        }
+    }
+});
