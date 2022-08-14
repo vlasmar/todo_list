@@ -17,7 +17,7 @@ function createTask(){
     edit.className = 'pencil';
     deleteTask.className = 'delete';
     saveBtn.className='save';
-    info.className='discription';
+    info.className='description';
 
     list.appendChild(listItem);
     listItem.appendChild(divTask);    
@@ -35,12 +35,17 @@ function createTask(){
     deleteTask.src = 'images/delete-icon.png';
     saveBtn.src='images/save.png';
     saveBtn.style.display='none';
-
    
-    
+    checkbox.addEventListener('click', function(){
+        if (checkbox.checked){
+            listItem.classList.add('completed');
+        }
+    });
+
     edit.addEventListener('click', function() {
         info.contentEditable = true;
         info.classList.toggle('paragraph');
+        info.focus();
         edit.style.display='none';
         saveBtn.style.display='inline';
        
@@ -58,6 +63,14 @@ function createTask(){
 
 }
 
+input.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13) { 
+        e.preventDefault();
+        createTask();
+        input.value="";
+    }
+});
+
 let addButton = document.querySelector('#add');
 addButton.addEventListener('click',(e)=>{
     e.preventDefault();
@@ -70,12 +83,9 @@ addButton.addEventListener('click',(e)=>{
 });
 
 let removeButton = document.querySelector('#remove-button');
+const completedTasks = document.getElementsByClassName('completed');
 removeButton.addEventListener('click', (e) => {
-    const checkboxesList = document.getElementsByClassName('checkbox');
-    for (var i=0; i<checkboxesList.length; i++){
-        if (checkboxesList[i].checked){
-            const checkBox = document.querySelector('li'); 
-            checkBox.remove();
-        }
+    while (completedTasks.length > 0) {
+        completedTasks.item(0).remove();
     }
 });
