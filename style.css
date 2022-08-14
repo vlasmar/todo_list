@@ -16,12 +16,13 @@ body{
 
 p{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: #b9b9ba;
+    color: #eaeaf2;
+    align-items: center;
     
 }
 
 .box{
-    background-color: #434b53f5;
+    background-color: #707072ae;
     margin: auto;
     text-align: center;
     border-radius: 30px;
@@ -73,13 +74,20 @@ h1{
 .checkbox{
     transform: scale(1.5);
     margin-right: 0.5rem;
-    margin-top: 1.2rem;
-height:1em;
-width:1em;
-cursor:pointer;
-border-radius:4em;
-accent-color: green;
+    height:0.9em;
+    width:0.9em;
+    cursor:pointer;
+    border-radius:4em;
+    margin-top: 1.4rem;
+    accent-color: green;
 }
+.checkbox:checked +.discription{
+    text-decoration:line-through white;
+    color: rgb(25, 74, 25);
+
+
+}
+
 
 .task{
     display: flex;
@@ -136,3 +144,8 @@ li{
     color: rgba(192, 192, 192, 0.8);
     text-decoration: line-through;
   }
+  
+.todo-task:has(input:checked){
+    display: none;
+    background-color:black;
+}

@@ -17,6 +17,7 @@ function createTask(){
     edit.className = 'pencil';
     deleteTask.className = 'delete';
     saveBtn.className='save';
+    info.className='discription';
 
     list.appendChild(listItem);
     listItem.appendChild(divTask);    
@@ -34,6 +35,8 @@ function createTask(){
     deleteTask.src = 'images/delete-icon.png';
     saveBtn.src='images/save.png';
     saveBtn.style.display='none';
+
+   
     
     edit.addEventListener('click', function() {
         info.contentEditable = true;
