@@ -9,6 +9,7 @@ function createTask(){
     const edit = document.createElement('img');
     const deleteTask = document.createElement('img');
     const saveBtn =document.createElement('img')
+    let clearAllButton = document.querySelector('#clear-all-button');
 
     listItem.classList.add('todo-tasks');
     divTask.classList.add('task');
@@ -39,6 +40,8 @@ function createTask(){
     checkbox.addEventListener('click', function(){
         if (checkbox.checked){
             listItem.classList.add('completed');
+        } else {
+            listItem.classList.remove('completed');
         }
     });
 
@@ -85,7 +88,11 @@ addButton.addEventListener('click',(e)=>{
 let removeButton = document.querySelector('#remove-button');
 const completedTasks = document.getElementsByClassName('completed');
 removeButton.addEventListener('click', (e) => {
+    if (completedTasks.length == 0){
+        alert('You should complete any of the tasks below first!');
+    }
     while (completedTasks.length > 0) {
         completedTasks.item(0).remove();
     }
 });
+
