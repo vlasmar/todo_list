@@ -122,6 +122,18 @@ img{
     cursor: pointer;
     margin-bottom: 2rem;
 }
+
+#clear-all-button{
+    background-color: rgb(11, 173, 173);
+    color: white;
+    border: none;
+    padding: 1rem;  
+    border-radius: 20px;  
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
 li{
     list-style-type: none;
     display: flexbox;
