@@ -9,7 +9,6 @@ function createTask(){
     const edit = document.createElement('img');
     const deleteTask = document.createElement('img');
     const saveBtn =document.createElement('img')
-    let clearAllButton = document.querySelector('#clear-all-button');
 
     listItem.classList.add('todo-tasks');
     divTask.classList.add('task');
